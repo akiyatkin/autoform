@@ -5,7 +5,6 @@ use infrajs\config\Config;
 use infrajs\ans\Ans;
 use infrajs\rest\Rest;
 
-
 return Rest::get(function($name = false, $list = '', $range = 'A:Z'){
 	$conf = Config::get('autoform');
 	$ans = array();
@@ -17,5 +16,5 @@ return Rest::get(function($name = false, $list = '', $range = 'A:Z'){
 	return Ans::ret($ans);
 },'submit', function () {
 	$ans = array();
-	Ans::ret($ans,'Проверка');
+	Ans::ret($ans,'Проверка '.date('H:i'));
 });

@@ -4,9 +4,13 @@
 		"moroz":"tableid"
 	},
 	"clutch":{
+		"moment":[
+			"vendor/moment/",
+			"vendor/akiyatkin/autoform/"
+		],
 		"bootstrap-datetimepicker":[
 			"vendor/eonasdan/",
-			"vendor/akiatkin/autoform/"
+			"vendor/akiyatkin/autoform/"
 		]
 	}
 }
