@@ -1,0 +1,10 @@
+{
+	"tpl":"-autoform/layout.tpl",
+	"jsontpl":"-autoform/{config.book}/{config.list}",
+	"autosavename":"autoform",
+	"onsubmit":true,
+	"config":{
+		"book":"id Книги",
+		"list":"Заявка"
+	}
+}

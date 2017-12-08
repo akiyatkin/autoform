@@ -1,0 +1,12 @@
+{
+	"css":"style.css",
+	"books":{
+		"moroz":"tableid"
+	},
+	"clutch":{
+		"bootstrap-datetimepicker":[
+			"vendor/eonasdan/",
+			"vendor/akiatkin/autoform/"
+		]
+	}
+}

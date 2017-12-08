@@ -1,0 +1,7 @@
+.autoform .form-group {
+	display:none;
+}
+.autoform .form-control {
+	font-size:24px;
+	height:auto;
+}
