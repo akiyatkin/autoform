@@ -1,7 +1,13 @@
 {
 	"css":"style.css",
+	"pub":["ykassa"],
 	"books":{
 		"moroz":"tableid"
+	},
+	"update":"update.php",
+	"ykassa":{
+		"shopid":"11111",
+		"scid":"11111"
 	},
 	"clutch":{
 		"moment":[

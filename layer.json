@@ -3,6 +3,7 @@
 	"jsontpl":"-autoform/{config.book}/{config.list}",
 	"autosavename":"autoform",
 	"onsubmit":true,
+	"parsedtpl":"{config.ans.result}",
 	"config":{
 		"book":"id Книги",
 		"list":"Заявка"
