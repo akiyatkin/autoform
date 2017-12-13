@@ -44,7 +44,6 @@ return Rest::get(function($name = false, $list = '', $range = 'A:Z'){
 	$ans['detail'] = Load::json_encode($form);
 	//РАСЧЁТ ЦЕНЫ
 	$sum = (int) preg_replace("/\D/",'',$res['descr']['Базовая цена']);
-	
 	if ($form['promo']) {
 		if ($form['promo'] == $res['descr']['Купон для скидки']) {
 			$ans['sale'] = $sum;
@@ -52,6 +51,9 @@ return Rest::get(function($name = false, $list = '', $range = 'A:Z'){
 		} else if(strstr($form['promo'], $res['descr']['Биглион'])) {
 			$ans['biglion'] = true;
 			$sum = 0;
+		} else if($form['promo'] == 'itlife') {
+			$ans['sale'] = $sum;
+			$sum = 3;
 		}
 	}
 	$days = explode(';', $res['descr']['Дни наценки']);
