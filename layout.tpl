@@ -96,7 +96,7 @@
         domready( function () {
         	$(function () {
         		var val = Session.get('autoform.datetime',null);
-        		setTimeOut(function(){
+        		setTimeout(function(){
         			$('#input{Поле}').datetimepicker({
 	            		format: 'DD.MM.YYYY H:mm',
 	            		stepping: 5, 
