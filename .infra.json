@@ -1,5 +1,6 @@
 {
 	"css":"style.css",
+	"require":"infra.php",
 	"pub":["ykassa"],
 	"books":{
 		"moroz":"tableid"
