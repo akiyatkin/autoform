@@ -84,12 +84,19 @@
 {input-datetime:}
     <div class="form-group">
     	<label for="input{Поле}">{Вопрос} {Обязательно?:mark}</label>
-        <div class='input-group date' id='input{Поле}'>
-            <input placeholder="{Пример}" name="{Поле}" type="text" class="form-control" />
-            <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-            </span>
-        </div>
+    	<div class="row">
+			<div class="col-sm-6">
+		        <div class='input-group date' id='input{Поле}'>
+		            <input placeholder="{Пример}" name="{Поле}" type="text" class="form-control" />
+		            <span class="input-group-addon">
+		                <span class="glyphicon glyphicon-calendar"></span>
+		            </span>
+		        </div>
+			</div>
+			<div class="col-sm-6">
+				{Подсказка:help}
+			</div>
+		</div>
     </div>
 	        
     <script type="text/javascript">
