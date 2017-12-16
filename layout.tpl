@@ -95,11 +95,10 @@
     <script type="text/javascript">
         domready( function () {
         	$(function () {
-        		var val = Session.get('autoform.datetime',null);
         		setTimeout(function(){
         			$('#input{Поле}').datetimepicker({
 	            		format: 'DD.MM.YYYY H:mm',
-	            		stepping: 5, 
+	            		stepping: 10, 
 	            		minDate:moment("12/20/17"),
 	            		maxDate:moment("01/20/18"),
 	            		widgetPositioning:{
@@ -108,15 +107,9 @@
 				         }
 	            	});
         		},1);
-
-
-            	/*.on("dp.change", function (e) {
-            		$(this).val(e.date._i).change();
-		        });*/
         	});
         });
     </script>
-	    
 {input-button:}
 	<div class="form-group">
 		<div class="input-group">
@@ -127,7 +120,7 @@
 	{config.ans.sum?config.ans:showanspay?config.ans:showansready}
 	{showanspay:}
 		<h2>Ваша заявка почти готова!</h2>
-		<img src="/images/moroz/cards.png" class="right">
+		<img src="/-autoform/cards.png" class="right">
 		<p>Осталось оплатить с помощью карты VISA или MasterCard</p>
 		{sale?:strokecost?:basecost}
 		{config.ans:payform}
@@ -141,7 +134,8 @@
 		<p>Номер заявки: <b>{orderid}</b></p>
 		{data.res.descr.Готово}
 		<p>
-			<input class="btn btn-default" type="button" value="Назад" onclick="delete Controller.find('id','{id}').config.ans;  Controller.check();">
+			<input class="btn btn-default" type="button" value="Назад" 
+			onclick="delete Controller.ids['{id}'].config.ans;  Controller.check();">
 		</p>
 {payform:}
 <p>
@@ -152,7 +146,8 @@
 	    <textarea name="orderDetails" style="display:none">{detail}</textarea>
 	    <input type="hidden" required value="{orderid}" name="customerNumber" id="yphone"/>
 
-		<input class="btn btn-default" type="button" value="Назад" onclick=" delete Controller.find('id','{id}').config.ans;  Controller.check();">
+		<input class="btn btn-default" type="button" value="Назад" 
+		onclick="delete Controller.ids['{id}'].config.ans;  Controller.check();">
 	    <input class="btn btn-success" type="submit" value="Перейти к оплате">
 	</form>
 </p>
