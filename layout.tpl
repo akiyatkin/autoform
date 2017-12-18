@@ -54,27 +54,53 @@
 {input:}
 	{:input-{Тип}}
 	{mark:}<span style="color:red">*</span>
+{help:}<span class="a" onclick="$(this).next().slideToggle('slow')">Помощь</span><div style="display:none">{.}</div>
+{required:} required
 {input-text:}
 	<div class="form-group">
-		<label for="input{Поле}">{Вопрос} {Обязательно?:mark}</label>
+		<label for="input{Поле}">{Вопрос}{Обязательно?:mark}</label>
 		<div class="row">
 			<div class="col-sm-6">
 			
-				<input type="text" name="{Поле}" type="text" id="input{Поле}" placeholder="{Пример}" class="form-control">
+				<input type="text"{Обязательно?:required} name="{Поле}" type="text" id="input{Поле}" placeholder="{Пример}" class="form-control">
 			</div>
 			<div class="col-sm-6">
 				{Подсказка:help}
 			</div>
 		</div>
 	</div>
-	{help:}<span class="a" onclick="$(this).next().slideToggle('slow')">Помощь</span><div style="display:none">{.}</div>
+{input-number:}
+	<div class="form-group">
+		<label for="input{Поле}">{Вопрос} {Обязательно?:mark}</label>
+		<div class="row">
+			<div class="col-sm-6">
+			
+				<input type="number"{Обязательно?:required} name="{Поле}" type="text" id="input{Поле}" placeholder="{Пример}" class="form-control">
+			</div>
+			<div class="col-sm-6">
+				{Подсказка:help}
+			</div>
+		</div>
+	</div>
+{input-checkbox:}
+	<div class="form-group">
+		<label for="input{Поле}">{Вопрос} {Обязательно?:mark}</label>
+		<div class="row">
+			<div class="col-sm-6">
+				<input type="checkbox"{Обязательно?:required} name="{Поле}" type="text" id="input{Поле}" title="{Пример}">
+			</div>
+			<div class="col-sm-6">
+				{Подсказка:help}
+			</div>
+		</div>
+	</div>
 {input-textarea:}
 	<div class="form-group">
 		<label for="input{Поле}">{Вопрос} {Обязательно?:mark}</label>
 		<div class="row">
 			<div class="col-sm-6">
 			
-				<textarea rows="3" name="{Поле}" id="input{Поле}" class="form-control"></textarea>
+				<textarea rows="3"{Обязательно?:required} name="{Поле}" id="input{Поле}" class="form-control"></textarea>
 			</div>
 			<div class="col-sm-6">
 				{Подсказка:help}
@@ -87,7 +113,7 @@
     	<div class="row">
 			<div class="col-sm-6">
 		        <div class='input-group date' id='input{Поле}'>
-		            <input placeholder="{Пример}" name="{Поле}" type="text" class="form-control" />
+		            <input placeholder="{Пример}"{Обязательно?:required} name="{Поле}" type="text" class="form-control" />
 		            <span class="input-group-addon">
 		                <span class="glyphicon glyphicon-calendar"></span>
 		            </span>
